@@ -1,14 +1,15 @@
 import Header from "./Components/Header";
-import Cards from "./Components/Cards";
+
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Box, Grid, Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import {
-  CustomDivider,
+ 
   CustomTypo,
   ImageCard
 } from "./Components";
-import { cardData, myCardData } from "./data";
+import { PopularOn, myCardData, AIAssistant, Movie } from "./data";
+
 
 function App() {
 
@@ -35,7 +36,7 @@ function App() {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 6
+      items: 5
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -64,7 +65,7 @@ function App() {
               <Box key={i} display="flex" justifyContent="center" alignItems="center"  m={2} >
                 <ImageCard
                   image={eachData.image}
-                  subtitle={eachData.subtitle}
+                  // subtitle={eachData.subtitle}
                   description={eachData.description}
                   title={eachData.title}
                 />
@@ -76,24 +77,73 @@ function App() {
       {/* </Carousel> */}
       {/* 6 cards */}
       <Stack m={12} >
-      <CustomTypo type="heading" Bold mB={2}  pL={2} fontFamily="Work Sans" color="white">
-        Cricket
+      <CustomTypo type="normal" Bold mB={2}  pL={2} fontFamily="Inter" color="white">
+          {PopularOn[0].heading}
       </CustomTypo>
         <Box >
           <Carousel responsive={responsive2}>
-            {myCardData.map((eachData, i) => (
-              <Box key={i} display="flex" justifyContent="center" alignItems="center" mt={12} m={4}>
+            {PopularOn.map((eachData, i) => (
+              <Box key={i} display="flex" justifyContent="center" alignItems="center" mt={12} m={2}>
                 <ImageCard
                   image={eachData.image}
                   subtitle={eachData.subtitle}
                   description={eachData.description}
                   title={eachData.title}
+                  
                 />
               </Box>
             ))}
           </Carousel>
         </Box>
       </Stack>
+
+
+      <Stack m={12} >
+      <CustomTypo type="normal" Bold mB={2}  pL={2} fontFamily="Inter" color="white">
+          {AIAssistant[0].heading}
+      </CustomTypo>
+        <Box >
+          <Carousel responsive={responsive2}>
+            {AIAssistant.map((eachData, i) => (
+              <Box key={i} display="flex" justifyContent="center" alignItems="center" mt={12} m={2}>
+                <ImageCard
+                  image={eachData.image}
+                  subtitle={eachData.subtitle}
+                  description={eachData.description}
+                  title={eachData.title}
+                  
+                />
+              </Box>
+            ))}
+          </Carousel>
+        </Box>
+      </Stack>
+
+
+      <Stack m={12} >
+      <CustomTypo type="normal" Bold mB={2}  pL={2} fontFamily="Inter" color="white">
+          {Movie[0].heading}
+      </CustomTypo>
+        <Box >
+          <Carousel responsive={responsive2}>
+            {Movie.map((eachData, i) => (
+              <Box key={i} display="flex" justifyContent="center" alignItems="center" mt={12} m={2}>
+                <ImageCard
+                  image={eachData.image}
+                  subtitle={eachData.subtitle}
+                  description={eachData.description}
+                  title={eachData.title}
+                  
+                />
+              </Box>
+            ))}
+          </Carousel>
+        </Box>
+      </Stack>
+
+
+
+
       {/* </Carousel> */}
 
       {/*  
