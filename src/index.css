@@ -1,4 +1,70 @@
-*{
-  margin: 0;
-  padding: 0;
+ 
+
+
+.Card {
+  transition: all 0.4s  cubic-bezier(0.175,0.885,0,1);
+
+
+  /* width:100%; */
+  /* border-radius: 12px; */
+  box-shadow: 0px 13px 10px  -7px rgba(0,0,0,0.1);
+  
+
 }
+
+.Card:hover {
+  box-shadow: 0px 30px 18px  -8px rgba(0,0,0,0.1);
+  transform: scale(1.05, 1.05);
+}
+
+
+
+
+@media (max-width: 768px) {
+ 
+
+  
+  .Card {
+
+    transition: all 0.4s  cubic-bezier(0.175,0.885,0,1);
+    /* width:90%; */
+    /* border-radius: 12px; */
+    box-shadow: 0px 13px 10px  -7px rgba(0,0,0,0.1);
+
+  }
+  
+  .Card:hover {
+    box-shadow: 0px 30px 18px  -8px rgba(0,0,0,0.1);
+    transform: scale(1.05, 1.05);
+  }
+
+  .social-icons{
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+ 
+}
+  @media (max-width: 991px) {
+  
+    .Card {
+  
+      transition: all 0.4s  cubic-bezier(0.175,0.885,0,1);
+
+      /* width:50%; */
+      /* border-radius: 12px; */
+      box-shadow: 0px 13px 10px  -7px rgba(0,0,0,0.1);
+     
+    }
+    
+    .Card:hover {
+      box-shadow: 0px 30px 18px  -8px rgba(0,0,0,0.1);
+      transform: scale(1.05, 1.05);
+    }
+    
+   
+  }
+
+
+  .css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
+    background-color:#111411;
+  }

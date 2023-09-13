@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import DrawerComp from './DrawerComp';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -52,7 +53,7 @@ const Search = styled('div')(({ theme }) => ({
 
 const Header = () => {
 
-const pages =  ['Categories','How it works'];  
+// const pages =  ['Categories','How it works'];  
 const theme = useTheme();
 
 const isMatch = useMediaQuery(theme.breakpoints.down('lg')); 
@@ -63,7 +64,7 @@ const [value, setValue] = useState()
    <AppBar sx={{background: '#000',height: '120px'}}>
     <Toolbar>
     <Typography sx = {{fontWeight: '700', fontSize: '1.5rem' , marginLeft:'70px', pt:5}}>
-        Chatflex.io
+       <NavLink to="/" style={{textDecoration:"none", color: "white"}}>Chatflex.io</NavLink>
     </Typography>
     {
         isMatch ? (
@@ -73,15 +74,29 @@ const [value, setValue] = useState()
             </>
         ) :(
             <>
-            <Tabs sx = {{marginLeft: '20px',pt:5}} textColor='white' value={value} onChange = {(e, value) => setValue(value)} indicatorColor='primary'>
+  <Tabs sx = {{marginLeft: '20px',pt:5}} textColor='white' value={value} onChange = {(e, value) => setValue(value)} indicatorColor='primary'>
             {
-                pages.map((page, index) => (
-                    <Tab key = {index} label = {page}/>
-                ))
+                // pages.map((page1, index1) => (
+                  <div>
+                    {/* <Tab key = {index1} label = {page1}/> */}
+                    <NavLink to="/categories">
+                    <Tab label="categories" sx={{color:"white"}} />
+                    </NavLink>
+
+
+                    <NavLink to="/howitworks">
+                    <Tab label="How it works" sx={{color:"white"}} />
+                    </NavLink>
+
+
+                    </div>
+                // ))
+                
             }
-        {/* <Tab sx= {{textTransform :"none"}} label="Categories" />
-        <Tab sx= {{textTransform :"none"}} label="How it works" /> */}
-    </Tabs>
+
+
+  </Tabs>
+
     <Search sx= {{mt:5, width:'450px !important', borderRadius:"30px", background:'white'}}>
             <SearchIconWrapper>
               <SearchIcon sx= {{color:'#000000'}} />
