@@ -66,7 +66,7 @@ const Footer = () => {
 
 
 
-      <Grid className="social-icons" item xs={12} sm={4}  mt={2}  width= {100}>
+      <Grid className="social-icons" container item xs={12} lg={12}  sm={4}  mt={2}  width= {100}>
           <Typography variant="h6" color="#ADAEB5" gutterBottom>
            
           </Typography>
@@ -84,7 +84,8 @@ const Footer = () => {
             <Twitter />
           </Link>
         </Grid>
-      <Box mt={-3} mr={15}>
+      <Box  mt={-3} mr={15}>
+        <Grid container item xs={12} lg={12}>
         <Typography variant="body2" color="#ADAEB5" align="center" sx={{width:"100%"}}>
      
           <Link color="#ADAEB5" href="#" sx= {{ width:"100%", textDecoration:"none", float:"right"}}>
@@ -94,8 +95,11 @@ const Footer = () => {
           {"Powered By Social BU"}
             </Link>
         </Typography>
+        </Grid>
       </Box>
-  <Box sx={{ borderBottom: 1, borderColor: 'divider' }} pr={0}> 
+      
+  <Box  sx={{ borderBottom: 1, borderColor: 'divider' }} pr={0}> 
+  <Grid container item xs={12} lg={12}>
   <Tabs  aria-label="basic tabs example" >
     <Tab label="Jobs" sx={{color:"#ADAEB5"}}/>
     <Tab label="FAQ"  sx={{color:"#ADAEB5"}}/>
@@ -103,7 +107,9 @@ const Footer = () => {
     <Tab label="Privacy" sx={{color:"#ADAEB5"}}/>
     <Tab label="Guidelines" sx={{color:"#ADAEB5"}}/>
   </Tabs>
+  </Grid>
 </Box>
+
     </Container>
   </Box>
   )

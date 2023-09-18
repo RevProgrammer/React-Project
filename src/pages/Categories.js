@@ -3,6 +3,7 @@ import Header from "../Components/Header";
 import { Divider } from '@mui/material';
 import { Typography } from '@mui/material';
 
+
 import {
  
     CustomTypo,
@@ -24,6 +25,7 @@ const Categories = () => {
 
      
      </Typography>
+
 
         
 
