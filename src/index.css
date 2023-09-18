@@ -90,5 +90,9 @@
     background-color:#111411;
   }
 
-
+  .container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    gap: 20px; /* Adjust the gap between columns */
+  }
   
